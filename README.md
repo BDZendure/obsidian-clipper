@@ -15,6 +15,24 @@ Install the extension by downloading it from the official directory for your bro
 
 ## Use the extension
 
+### Create or open existing notes (this fork)
+
+This fork requires the included companion Obsidian plugin for templates using
+**Create a new note**. Obsidian's built-in `new` URI creates numbered duplicates
+and cannot safely perform this operation on its own.
+
+1. Copy `obsidian-plugin/main.js` and `obsidian-plugin/manifest.json` into
+   `<vault>/.obsidian/plugins/web-clipper-create-or-open/`.
+2. Reload Obsidian and enable **Web Clipper Create or Open** in Community plugins.
+3. Build and load this fork of the extension as described below.
+
+Install the companion in each destination vault. A create clip opens the exact
+destination note in the active tab if it exists, without changing its contents.
+Missing notes are created with the clipped content. Silent mode applies to new
+notes; existing notes always open. Explicit append, prepend, daily-note, and
+overwrite template behaviors retain their original behavior. CLI clipping is
+unchanged. Without the companion enabled, create clips will not be saved.
+
 Documentation is available on the [Obsidian Help site](https://help.obsidian.md/web-clipper), which covers how to use [highlighting](https://help.obsidian.md/web-clipper/highlight), [templates](https://help.obsidian.md/web-clipper/templates), [variables](https://help.obsidian.md/web-clipper/variables), [filters](https://help.obsidian.md/web-clipper/filters), and more.
 
 ## Contribute

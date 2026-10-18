@@ -1,0 +1,9 @@
+{
+	"id": "web-clipper-create-or-open",
+	"name": "Web Clipper Create or Open",
+	"version": "1.0.0",
+	"minAppVersion": "1.5.0",
+	"description": "Create clipped notes only when missing, otherwise open them in the active tab.",
+	"author": "Obsidian Web Clipper fork",
+	"isDesktopOnly": false
+}

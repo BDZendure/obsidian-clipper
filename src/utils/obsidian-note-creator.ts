@@ -63,7 +63,10 @@ export async function saveToObsidian(
 		}
 
 		const formattedNoteName = sanitizeFileName(noteName);
-		obsidianUrl = `obsidian://new?file=${encodeURIComponent(path + formattedNoteName)}`;
+		// The companion plugin performs an exact-path create-or-open operation.
+		// Core's `new` action always creates numbered duplicates on collisions.
+		const action = behavior === 'create' ? 'web-clipper' : 'new';
+		obsidianUrl = `obsidian://${action}?file=${encodeURIComponent(path + formattedNoteName)}`;
 	}
 
 	if (behavior.startsWith('append')) {
